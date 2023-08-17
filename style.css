@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+main {
+    margin: 13px 0;
+}
+
+#encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: palevioletred;
+    color: white;
+    height: 15vh;
+}
+
+#botones-filtro button {
+    border: none;
+    background: none;
+    color: white;
+    margin: 0 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#botones-filtro button:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+#contenedor-cajas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#total-personajes {
+    text-align: center;
+}
+
+#caja-vacia {
+    height: 475px;
+}
+
+.caja {
+    width: 300px;
+    height: 475px;
+    margin: 15px;
+    border: 3px solid palevioletred;
+}
+
+.caja:hover {
+    border: 3px solid rgb(227, 175, 192);
+}
+
+.caja-imagen {
+    overflow: hidden;
+}
+
+.caja-imagen:hover {
+    filter: saturate(1.5);
+}
+
+.caja-contenido {
+    padding: 10px;
+    height: 130px;
+    font-size: 13px;
+}
+
+#ver-mas, #botones-paginado button {
+    color: white;
+    background-color: palevioletred;
+    border: 1px solid grey;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#botones-paginado button:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.caja-pie {
+    display: flex;
+    justify-content: center;
+}
+
+#paginado, #botones-paginado{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: palevioletred;
+    height: 15vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+@media (max-width: 730px) {
+    #encabezado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caja {
+        height:820px;
+    }
+
+    .caja-contenido {
+        height: 300px;
+    }
+
+    .caja, .caja-contenido, .caja-imagen img {
+        width: 450px;
+        font-size: 25px;
+    }
+
+    #ver-mas {
+        width: 150px;
+        font-size: 25px;
+    }
+
+
+}
